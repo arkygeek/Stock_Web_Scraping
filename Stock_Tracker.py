@@ -1,7 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 import time
-import pandas as pd
+import openpyxl as xl
+import numpy as np
 
 def UPS_Tracker():
     URL = 'https://uk.finance.yahoo.com/quote/UPS?p=UPS&.tsrc=fin-srch'
@@ -38,6 +39,11 @@ def Nintendo_Tracker():
     price = soup.find_all('div', {'class': 'My(6px) Pos(r) smartphone_Mt(6px)'})[0].find('span').text
     print(price)
 
+
 while True:
     UPS_Tracker()
+    Mircrosoft_Tracker()
+    RY_Canada_Tracker()
+    Coca_Cola_Tracker()
+    Nintendo_Tracker()
     time.sleep(2)
