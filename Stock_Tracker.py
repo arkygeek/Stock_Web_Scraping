@@ -1,8 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 import time
-import openpyxl as xl
-import numpy as np
 
 def UPS_Tracker():
     URL = 'https://uk.finance.yahoo.com/quote/UPS?p=UPS&.tsrc=fin-srch'
